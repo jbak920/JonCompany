@@ -1,7 +1,6 @@
-from game.offices.office import Office
 from game.board import Board
 
-class ManagerOfShipping(Office):
+class ManagerOfShipping:
 
     def __init__(self, board: Board):
         self.board = board

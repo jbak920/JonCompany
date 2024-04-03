@@ -44,7 +44,6 @@ class TestManagerOfShipping(unittest.TestCase):
         self.assertEqual(self.board.map.s.num_extra_ships, 0)
         self.assertEqual(self.board.manager_of_shipping_treasury, 0)
         self.assertEqual(self.board.company_balance, 0)
-        
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
