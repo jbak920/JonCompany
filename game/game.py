@@ -1,4 +1,4 @@
-from game_state import GameState
+from game.game_state import GameState
 
 game_state = GameState()
 

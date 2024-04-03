@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from family import Family
+from game.family import Family
 
 @dataclass
 class Office():
