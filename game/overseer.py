@@ -14,3 +14,17 @@ class Overseer:
         self.board.map.e.num_extra_ships = 0
         self.board.map.s.num_extra_ships = 0
         self.board.map.c.num_extra_ships = 0
+
+        self.board.armies["Bengal"].ready_officers.extend(self.board.armies["Bengal"].exhausted_officers)
+        self.board.armies["Bengal"].exhausted_officers = []
+        self.board.armies["Madras"].ready_officers.extend(self.board.armies["Madras"].exhausted_officers)
+        self.board.armies["Madras"].exhausted_officers = []
+        self.board.armies["Bombay"].ready_officers.extend(self.board.armies["Bombay"].exhausted_officers)
+        self.board.armies["Bombay"].exhausted_officers = []
+
+        self.board.armies["Bengal"].ready_regiments += self.board.armies["Bengal"].exhausted_regiments
+        self.board.armies["Bengal"].exhausted_regiments = 0
+        self.board.armies["Madras"].ready_regiments += self.board.armies["Madras"].exhausted_regiments
+        self.board.armies["Madras"].exhausted_regiments = 0
+        self.board.armies["Bombay"].ready_regiments += self.board.armies["Bombay"].exhausted_regiments
+        self.board.armies["Bombay"].exhausted_regiments = 0

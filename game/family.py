@@ -1,5 +1,12 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+
+
+ALLOWED_FAMILIES = ["Paxton", "Larkin", "Hastings", "Walsh", "Benyon", "Sykes"]
 
 @dataclass
 class Family:
-    _name: str = None
+    name: str = field(init=True)
+
+    def __post_init__(self):
+        if self.name not in ALLOWED_FAMILIES:
+            raise ValueError(f"{self.name} is not one of the 6 allowed families")
