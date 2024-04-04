@@ -63,8 +63,5 @@ class TestManagerOfShipping(unittest.TestCase):
         self.assertEqual(self.board.armies["Bengal"].ready_officers, [Family("Paxton"), Family("Larkin")])
         self.assertEqual(self.board.armies["Bengal"].exhausted_officers, [])
 
-    def test_promote_commander(self):
-
-
 if __name__ == "__main__":
     unittest.main(verbosity=2)
