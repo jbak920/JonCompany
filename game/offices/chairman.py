@@ -10,3 +10,11 @@ class Chairman:
             return
         self.board.manager_of_shipping_treasury += funds
         self.board.company_balance -= funds
+
+    def take_debt(self, debt):
+        if debt < 0:
+            return
+        if debt > (8 - self.board.debt_track):
+            return
+        self.board.debt_track += debt
+        self.board.company_balance += (5 * debt)

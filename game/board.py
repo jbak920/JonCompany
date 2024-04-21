@@ -29,6 +29,7 @@ class Board:
     bombay_treasury: int = 0
     madras_treasury: int = 0
     bengal_treasury: int = 0
+    debt_track: int = 0
 
     def __post_init__(self):
         if self.map is None:
